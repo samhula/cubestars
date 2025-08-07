@@ -13,14 +13,14 @@
                         @csrf
                         <div class="flex flex-row ">
                             <input type="hidden" name="product_id" value="{{ $product->id }}">
-                            <input type="number" name="quantity" id="quantity" value="1" class="w-[40px] border border-gray-300 rounded-lg p-1 text-center" min="1" max="99">
-                            <div class="flex flex-col hover:pointer text-white -translate-x-4.5">
-                                <div class="bg-blue-500 px-2 py-1 quantity-btn increase rounded-tr-lg hover:cursor-pointer">
+                            <input type="number" name="quantity" id="quantity" value="1" class="w-[40px] border border-gray-300 rounded-l-lg p-1 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" min="1" max="{{ $product->stock_quantity }}">
+                            <div class="flex flex-col hover:pointer text-white -translate-x-1.5">
+                                <div class="bg-blue-500 p-1 quantity-btn increase rounded-tr-lg hover:cursor-pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                                     </svg>
                                 </div>
-                                <div class="bg-blue-500 px-2 py-1 quantity-btn decrease rounded-br-lg hover:cursor-pointer">
+                                <div class="bg-blue-500 p-1 quantity-btn decrease rounded-br-lg hover:cursor-pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
                                     </svg>

@@ -26,6 +26,10 @@ Route::get('/dashboard', function () {
             (object) ['id' => '8', 'name' => 'Product 8', 'price' => 89.99, 'description' => 'Description for product 8', 'stock_quantity' => 1, 'image' => 'gan.webp'],
             (object) ['id' => '9', 'name' => 'Product 9', 'price' => 99.99, 'description' => 'Description for product 9', 'stock_quantity' => 5, 'image' => 'gan.webp'],
         ],
+        'messages' => [
+            (object) ['message' => 'This is a message'],
+            (object) ['message' => 'This is another message']
+        ]
     ]);
 });
 
@@ -43,5 +47,9 @@ Route::get('/', function () {
             (object) ['id' => '9', 'name' => 'Product 9', 'price' => 99.99, 'description' => 'Description for product 9', 'stock_quantity' => 5, 'image' => 'gan.webp'],
 
         ],
+        'messages' => [
+            (object) ['message' => 'This is a message'],
+            (object) ['message' => 'This is another message']
+        ]
     ]);
 });

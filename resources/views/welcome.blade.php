@@ -1,4 +1,6 @@
-<x-utils.layout :products="$products">
+@props(['products', 'messages'])
+
+<x-utils.layout :products=$products :messages=$messages>
     <x-utils.nav />
     <div class="grid grid-cols-12 gap-4 p-4">
         <x-products.filters class="col-span-12 md:col-span-3 xl:col-span-2"/>

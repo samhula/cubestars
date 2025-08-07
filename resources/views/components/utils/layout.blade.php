@@ -1,4 +1,4 @@
-@props(['products'])
+@props(['products', 'messages'])
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -14,5 +14,14 @@
             {{ $slot }}
         </div>
         <x-utils.footer />
+        @if(isset($messages))
+            <div class="flex flex-col gap-2 fixed bottom-2 right-2 z-50">
+                @foreach($messages as $message)
+                    <div class="bg-pink-200 p-2 shadow rounded">
+                        {{ $message->message }}
+                    </div>
+                @endforeach
+            </div>
+        @endif
     </body>
 </html>
