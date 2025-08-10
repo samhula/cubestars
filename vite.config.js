@@ -9,5 +9,17 @@ export default defineConfig({
             refresh: true,
         }),
         tailwindcss(),
-    ]
+    ],
+    server: {
+        host: 'cubestars.local',
+        port: 5173,
+        strictPort: true,
+        cors: {
+            origin: 'http://cubestars.local',
+            credentials: true,
+        },
+        hmr: {
+            host: 'cubestars.local',
+        },
+    },
 });

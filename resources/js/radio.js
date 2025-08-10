@@ -8,7 +8,7 @@ function toggleSelect(radio) {
             }
         } else {
             if (!radio.parentNode.classList.contains('bg-neutral-200')) {
-                radio.parentNode.classList.add('bg-neutral-200')
+                radio.parentNode.classList.add('bg-neutral-200');
             }
         }
     });
