@@ -4,7 +4,7 @@
     <img src="{{ asset('storage/images/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-48 object-contain mt-8">
     <div class="p-4 flex flex-col gap-2">
         <h3 class="text-3xl font-semibold text-center text-neutral-800">{{ $product->name }}</h3>
-        <p class="text-lg text-gray-500 text-center">{{ $product->description }}</p>
+        <p class="text-base text-gray-500 text-left">{{ Str::limit($product->description, 100, '...') }}</p>
         @if(isset($product->rating)) 
         <div class="flex flex-row mx-auto justify-center">
             @for($i = 0; $i < $product->rating; $i++)

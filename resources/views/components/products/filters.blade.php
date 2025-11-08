@@ -1,5 +1,5 @@
 <div {{ $attributes->merge(['class' => 'sticky top-20 bg-white shadow-md rounded-xl p-2 max-h-[89vh] overflow-y-auto no-scrollbar hidden md:flex md:flex-col']) }}>
-    <x-forms.form action="{{ url('/search') }}" method="GET" class="gap-2">
+    <x-forms.form action="{{ url('/search') }}" method="GET" class="gap-2 overflow-y-auto">
         <p class="text-neutral-500 text-lg font-semibold p-2">Sort By</p>
         <div class="flex flex-col gap-2">
             <div class="flex flex-row gap-1 rounded-xl p-2 transition-all duration-30">
@@ -62,6 +62,10 @@
                 <x-forms.input-checkbox id="brand-4" name="brand-4" checked=""/>
                 <x-forms.label for="brand-4" class="checkbox-select select-none text-sm">brand 4</x-forms.label>
             </div>
+        </div>
+        <hr class="border-neutral-200">
+        <div class="flex justify-center p-4">
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg">Apply</button>
         </div>
     </x-forms.form>
 </div>

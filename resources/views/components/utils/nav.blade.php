@@ -16,7 +16,7 @@
                         <a href="{{ url('/') }}" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium my-auto">Home</a>
                         <a href="{{ url('/about') }}" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium my-auto">About</a>
                         <a href="{{ url('/contact') }}" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium my-auto">Contact</a>
-                        <x-forms.input-search name="search" id="search"/>
+                        <x-forms.input-search name="search" id="search" class="border border-gray-200"/>
                     </div>
                 </div>
             </div>
